@@ -43,5 +43,40 @@ privileges:all
 ### Store procedure  
 This project includes a stored procedure written in MySQL to retrieve all grades of a specific student.
 You can call it in SQL like this:
-**CALL hae_opiskelija_arvosana(1);**  
-This procedure retrieves a list of etunimi, sukunimi, opintojaksonimi, arvosana and päivämäärä for a given student. It joins three tables to display the full information.  
+```
+# for example, get student's grade whose ID is 1
+CALL hae_opiskelija_arvosana(1);
+```
+This procedure retrieves a list of etunimi, sukunimi, opintojaksonimi, arvosana and three tables to display the full information.  
+## How to request?
+### Installation and Setup(Git Bash)
+
+```bash
+git clone https://github.com/your-username/opintorekisteri-api.git    
+```  
+```bash
+cd opintorekisteri-api  
+```  
+```bash
+npm install 
+```    
+set up database"db_opintorekist"
+```bash
+npm install 
+```  
+
+
+
+The API will run at `http://localhost:3002/`
+### API endpoints  
+ for example:Opiskelija
+- `GET /api/opiskelija` — Get all students
+- `GET /api/opiskelija/:id` — Get a specific student
+- `POST /api/opiskelija` — Add a new student
+- `PUT /api/opiskelija/:id` — Update student info
+- `DELETE /api/opiskelija/:id` — Delete student  
+Arviointi and opintojakso are the same as opiskelija.   
+
+### video presetation  
+A full walkthrough video is available here:
+[▶️ Watch on YouTube](https://youtu.be/your-video-link)
