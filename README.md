@@ -1,12 +1,12 @@
 # Opintorekisteri REST API
-This project is a REST API for managering a student system that named "Opintorekisteri" using MySQL,Node.js and Express,following the MVC architecture.
+This project is a REST API for managering a student record system that named "Opintorekisteri" using **MySQL**,**Node.js** and **Express**,following the **MVC** architecture.
 ## Technologies used
-* Backend: Node.js and Express  
-* Databese: MySQL includes MySQL Stored Procedure  
-* Architecture: MVC
-* Test: Postman 
-* CORS middleware  
-* Version control:Git and Github
+- **Backend:** Node.js & Express  
+- **Database:** MySQL (includes a stored procedure)  
+- **Architecture:** MVC (Model-View-Controller)  
+- **Testing Tool:** Postman  
+- **Middleware:** CORS  
+- **Version Control:** Git & GitHub  
 ## Database
 The project uses a MySQL relational database that includs three tables:  
 ### tables
@@ -31,15 +31,17 @@ The project uses a MySQL relational database that includs three tables:
 ### Entity-Relationship Diagram
 ![ER Diagram](./er_diagram.png)
 ### create MySQL user
-user name:alex  
-password:Alex@123456  
-database:opintorekisteri  
-privileges:all
+- **Username:** `alex`  
+- **Password:** `Alex@123456`  
+- **Database:** `opintorekisteri`  
+- **Privileges:** ALL
 ### Features
 - **Create** new records to the database
 - **Read** data from all tables
 - **Update** existing records
-- **Delete** records by ID
+- **Delete** records by ID  
+- Uses foreign key constraints between tables  
+- Includes one stored procedure  
 ### Store procedure  
 This project includes a stored procedure written in MySQL to retrieve all grades of a specific student.
 You can call it in SQL like this:
@@ -52,7 +54,7 @@ This procedure retrieves a list of etunimi, sukunimi, opintojaksonimi, arvosana 
 ### Installation and Setup(Git Bash)
 
 ```bash
-git clone https://github.com/your-username/opintorekisteri-api.git    
+git clone https://github.com/JuanYu0417/opintorekisteri-api  
 ```  
 ```bash
 cd opintorekisteri-api  
@@ -60,22 +62,25 @@ cd opintorekisteri-api
 ```bash
 npm install 
 ```    
-set up database"db_opintorekist"
+### set up database"db_opintorekist"  from 
+📂 https://github.com/JuanYu0417/opintorekisteri-api/tree/master/db_opintorekisteri
+
+### Run the project  
+start the server:
 ```bash
-npm install 
-```  
-
-
-
+npm start
+```    
 The API will run at `http://localhost:3002/`
-### API endpoints  
+### API Endpoints and Testing (with Postman)
  for example:Opiskelija
 - `GET /api/opiskelija` — Get all students
 - `GET /api/opiskelija/:id` — Get a specific student
 - `POST /api/opiskelija` — Add a new student
 - `PUT /api/opiskelija/:id` — Update student info
-- `DELETE /api/opiskelija/:id` — Delete student  
-Arviointi and opintojakso are the same as opiskelija.   
+- `DELETE /api/opiskelija/:id` — Delete student    
+Table "Arviointi" and "opintojakso" are the same as "opiskelija".     
+
+All endpoints have been tested using **Postman**.
 
 ### video presetation  
 A full walkthrough video is available here:

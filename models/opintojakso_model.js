@@ -9,8 +9,8 @@ const opintojakso = {
   },
   add: function(opintojakso, callback) {
     return db.query(
-      'insert into opintojakso (name,author,isbn) values(?,?,?)',
-      [opintojakso.name, opintojakso.author, opintojakso.isbn],
+      'insert into opintojakso (nimi,koodi,opintopisteet,laajuus) values(?,?,?,?)',
+      [opintojakso.nimi, opintojakso.koodi, opintojakso.opintopisteet, opintojakso.laajuus],
       callback
     );
   },
@@ -19,8 +19,8 @@ const opintojakso = {
   },
   update: function(id, opintojakso, callback) {
     return db.query(
-      'update opintojakso set name=?,author=?, isbn=? where id_opintojakso=?',
-      [opintojakso.name, opintojakso.author, opintojakso.isbn, id],
+      'update opintojakso set nimi=?, koodi=?, opintopisteet=?, laajuus=? where id_opintojakso=?',
+      [opintojakso.nimi, opintojakso.koodi, opintojakso.opintopisteet, opintojakso.laajuus, id],
       callback
     );
   }

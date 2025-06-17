@@ -9,8 +9,8 @@ const arviointi = {
   },
   add: function(arviointi, callback) {
     return db.query(
-      'insert into arviointi (name,author,isbn) values(?,?,?)',
-      [arviointi.name, arviointi.author, arviointi.isbn],
+      'insert into arviointi (arvosana,päivämäärä,id_opiskelija,id_opintojakso) values(?,?,?,?)',
+      [arviointi.arvosana, arviointi.päivämäärä, arviointi.id_opiskelija, arviointi.id_opintojakso],
       callback
     );
   },
@@ -19,8 +19,8 @@ const arviointi = {
   },
   update: function(id, arviointi, callback) {
     return db.query(
-      'update arviointi set name=?,author=?, isbn=? where id_arviointi=?',
-      [arviointi.name, arviointi.author, arviointi.isbn, id],
+      'update arviointi set arvosana=?,päivämäärä=?, id_opiskelija=?,id_opintojakso=? where id_arviointi=?',
+      [arviointi.arvosana, arviointi.päivämäärä, arviointi.id_opiskelija, arviointi.id_opintojakso,id],
       callback
     );
   }
