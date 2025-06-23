@@ -83,5 +83,5 @@ Table "Arviointi" and "opintojakso" are the same as "opiskelija".
 All endpoints have been tested using **Postman**.
 
 ### video presetation  
-A full walkthrough video is available here:
-[▶️ Watch on YouTube](https://youtu.be/your-video-link)
+A video is available here:
+https://unioulu-my.sharepoint.com/:v:/g/personal/juyu24_students_oamk_fi/EbyLSPdte3NOmJrHxYWIlO0B2_9NXWsqvS1iS88T6XWxrA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=todFY8
